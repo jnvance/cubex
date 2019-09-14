@@ -132,7 +132,7 @@ class Cube(object):
             self.systems.append(SystemNode(snode))
 
             for nnode in snode.findall('systemtreenode'):
-                for lnode in nnode.findall('locationgroup'):
+                for lnode in nnode.iter('locationgroup'):
                     self.locationgrps.append(LocationGroup(lnode))
 
         # TODO: Topologies
